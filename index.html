@@ -1,16 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Buy List">
+	<meta name="keywords" content="Buy, products, HTML,CSS">
+	<meta name="author" content="Polina Pavlenko">
+	<title>Buy List</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+<section>
+<div class="add-panel">
+		<div class="input-block">
+			<input class="add-input" type="text" placeholder="Назва товару" />
+			<button class="add-btn tooltip" data-tooltip="додати до списку">Додати</button>
+		</div>
+		<div class="product-item">
+			<span class="item-name">Печиво</span>
+			<div class="product-controls">
+				<button class="minus tooltip" data-tooltip="зменшити кількість">-</button>
+				<span class="count">2</span>
+				<button class="plus tooltip" data-tooltip="збільшити кількість">+</button>
+			</div>
+			<div class="product-actions">
+				<button class="bought-btn tooltip" data-tooltip="позначити як куплено">Куплено</button>
+				<button class="delete-btn tooltip" data-tooltip="видалити зі списку">✖</button>
+			</div>
+		</div>
+	<div class="product-item">
+			<span class="item-name-bought">Сир</span>
+			<div class="product-controls">
+				<span class="count">2</span>
+			</div>
+			<div class="product-actions">
+				<button class="bought-btn tooltip" data-tooltip="позначити як не куплено">Не куплено</button>
+			</div>
+	</div>
+	<div class="product-item">
+			<span class="item-name">Помідори</span>
+			<div class="product-controls">
+				<button class="minus tooltip" data-tooltip="зменшити кількість">-</button>
+				<span class="count">5</span>
+				<button class="plus tooltip" data-tooltip="збільшити кількість">+</button>
+			</div>
+
+			<div class="product-actions">
+				<button class="bought-btn tooltip" data-tooltip="позначити як куплено">Куплено</button>
+				<button class="delete-btn tooltip" data-tooltip="видалити зі списку">✖</button>
+			</div>
+	</div>
+</div>
+     <div class="remain-panel">
+	<h3 class="header">Залишилося</h3>
+	<ul class="remaining">
+		<li class="product-remain">Печиво <span class="amount-remain">2</span></li>
+		<li class="product-remain">Сир <span class="amount-remain">2</span></li>
+
+	</ul>
+		 <h3 class="header">Куплено</h3>
+		 <ul class="remaining">
+			 <li class="product-bought">Сир <span class="amount-remain">2</span></li>
+
+		 </ul>
+</div>
+		<div class="card">
+			<h3>Buy List</h3>
+			<div class="content">
+			<h5>Made by:</h5>
+			<p>Polina Pavlenko</p>
+			</div>
+
+			</div>
+</section>
 </body>
 </html>
