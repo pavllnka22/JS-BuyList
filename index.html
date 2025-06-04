@@ -12,57 +12,25 @@
 <body>
 <section>
 <div class="add-panel">
-		<div class="input-block">
-			<input class="add-input" type="text" placeholder="Назва товару" />
-			<button class="add-btn tooltip" data-tooltip="додати до списку">Додати</button>
-		</div>
-		<div class="product-item">
-			<span class="item-name">Печиво</span>
-			<div class="product-controls">
-				<button class="minus tooltip" data-tooltip="зменшити кількість">-</button>
-				<span class="count">2</span>
-				<button class="plus tooltip" data-tooltip="збільшити кількість">+</button>
-			</div>
-			<div class="product-actions">
-				<button class="bought-btn tooltip" data-tooltip="позначити як куплено">Куплено</button>
-				<button class="delete-btn tooltip" data-tooltip="видалити зі списку">✖</button>
-			</div>
-		</div>
-	<div class="product-item">
-			<span class="item-name-bought">Сир</span>
-			<div class="product-controls">
-				<span class="count">2</span>
-			</div>
-			<div class="product-actions">
-				<button class="bought-btn tooltip" data-tooltip="позначити як не куплено">Не куплено</button>
-			</div>
-	</div>
-	<div class="product-item">
-			<span class="item-name">Помідори</span>
-			<div class="product-controls">
-				<button class="minus tooltip" data-tooltip="зменшити кількість">-</button>
-				<span class="count">5</span>
-				<button class="plus tooltip" data-tooltip="збільшити кількість">+</button>
-			</div>
-
-			<div class="product-actions">
-				<button class="bought-btn tooltip" data-tooltip="позначити як куплено">Куплено</button>
-				<button class="delete-btn tooltip" data-tooltip="видалити зі списку">✖</button>
-			</div>
-	</div>
+  <div class="input-block">
+    <input class="add-input" type="text" placeholder="Назва товару" />
+    <button class="add-btn tooltip" data-tooltip="додати до списку">Додати</button>
+  </div>
+  <div class="products-container"></div>
+</div>
 </div>
      <div class="remain-panel">
 	<h3 class="header">Залишилося</h3>
-	<ul class="remaining">
-		<li class="product-remain">Печиво <span class="amount-remain">2</span></li>
-		<li class="product-remain">Сир <span class="amount-remain">2</span></li>
-
-	</ul>
+	<div id="remaining">
+		
+	</div>
+	 <p>Не куплено товарів: <span id="remaining-count">0</span></p>
+   
 		 <h3 class="header">Куплено</h3>
-		 <ul class="remaining">
-			 <li class="product-bought">Сир <span class="amount-remain">2</span></li>
-
-		 </ul>
+		 <div id="already-bought">
+			
+		 </div>
+		  <p>Куплено товарів: <span id="bought-count">0</span></p>
 </div>
 		<div class="card">
 			<h3>Buy List</h3>
@@ -73,5 +41,6 @@
 
 			</div>
 </section>
+	<script src="index.js"></script>
 </body>
 </html>
