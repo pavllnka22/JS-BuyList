@@ -112,6 +112,8 @@ function renderProducts() {
     if(!existingProduct && newName!=""){
         const newName = input.value.trim();
         product.name = newName;
+        saveProducts();
+        productItem.replaceChild(productName, input);
         renderProducts();
         updateSidebar();
     } else if (existingProduct) {
@@ -184,12 +186,12 @@ function confirmDelete(itemName){
          if (count > 1) {
         count--;
         countSpan.textContent = count;
-        
         if (count === 1) {
             minusButton.disabled = true;
             minusButton.classList.add("disabled");
         }
-         product.count = count;
+        product.count = count;
+        saveProducts();
     }
     } else if (event.target.classList.contains("delete-btn")) {
         const productItem = event.target.closest(".product-item");
